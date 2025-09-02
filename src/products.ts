@@ -1,23 +1,23 @@
-import { Product } from "./types";
+import { Product, SKU } from "./types";
 
 export const products: Product[] = [
   {
-    sku: "ipd",
+    sku: SKU.SUPER_IPAD,
     name: "Super iPad",
     priceCents: 54999, // $549.99
   },
   {
-    sku: "mbp",
+    sku: SKU.MACBOOK_PRO,
     name: "MacBook Pro",
     priceCents: 139999, // $1399.99
   },
   {
-    sku: "atv",
+    sku: SKU.APPLE_TV,
     name: "Apple TV",
     priceCents: 10950, // $109.50
   },
   {
-    sku: "vga",
+    sku: SKU.VGA_ADAPTER,
     name: "VGA adapter",
     priceCents: 3000, // $30.00
   },
