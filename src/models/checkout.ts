@@ -1,6 +1,6 @@
 import { Product, PricingRule } from "../types";
 import { priceDollars } from "../utils/utils";
-import { products } from "./products";
+import { products } from "../products";
 
 export class Checkout {
   private cartProducts: Product[] = [];
