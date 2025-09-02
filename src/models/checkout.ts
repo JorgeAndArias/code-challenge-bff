@@ -13,9 +13,18 @@ export class Checkout {
     const product = products.find((product) => product.sku === sku);
 
     if (!product) {
-      throw new Error(`Invalid sku: ${sku}.`);
+      throw new Error(`Invalid sku: "${sku}"`);
     }
 
     this.cartProducts.push(product);
+  }
+
+  total(): number {
+    const totalPrice = this.cartProducts.reduce(
+      (total, product) => total + product.price,
+      0
+    );
+
+    return totalPrice;
   }
 }
