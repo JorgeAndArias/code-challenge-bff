@@ -1,5 +1,3 @@
-// Model (in-memory data)
-
 import { Product } from "../types";
 
 export const products: Product[] = [
