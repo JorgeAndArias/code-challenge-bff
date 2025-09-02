@@ -1,4 +1,5 @@
 import { Product, PricingRule } from "../types";
+import { priceDollars } from "../utils/utils";
 import { products } from "./products";
 
 export class Checkout {
@@ -21,10 +22,15 @@ export class Checkout {
 
   total(): number {
     const totalPrice = this.cartProducts.reduce(
-      (total, product) => total + product.price,
+      (total, product) => total + product.priceCents,
       0
     );
 
-    return totalPrice;
+    const totalDiscount = this.pricingRules.reduce(
+      (total, priceRule) => total + priceRule.calculate(this.cartProducts),
+      0
+    );
+
+    return priceDollars(Math.max(0, totalPrice - totalDiscount));
   }
 }

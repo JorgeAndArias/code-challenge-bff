@@ -1,7 +1,7 @@
 export interface Product {
   sku: string;
   name: string;
-  price: number;
+  priceCents: number;
 }
 
 export interface PricingRule {
