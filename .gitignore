@@ -1,0 +1,9 @@
+# Node.js dependencies
+node_modules/
+
+# Compiled JS
+dist/
+build/
+
+# OS
+.DS_Store
