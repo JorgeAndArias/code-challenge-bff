@@ -1,6 +1,6 @@
 import { Product, PricingRule, SKU } from "../types";
 
-const IPAD_BULK_PRICE_CENTS = 49999; // 499.99
+const IPAD_BULK_PRICE_CENTS = 49999; // $499.99
 
 export const AppleTV3For2: PricingRule = {
   calculate(products: Product[]): number {
